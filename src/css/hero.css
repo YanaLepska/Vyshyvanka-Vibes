@@ -52,6 +52,11 @@
 
 .btn-icon {
   fill: #ecd979;
+  transition-duration: 1s;
+}
+
+.rotate {
+  transform: rotate(70deg);
 }
 
 .hero-picture {
@@ -68,7 +73,7 @@
     display: none;
   }
 
-.hero {
+  .hero {
     padding-top: 80px;
     padding-bottom: 50px;
   }
@@ -82,6 +87,27 @@
 
   .hero-star-icon {
     fill: #ecd979;
+    animation: 4s linear 0s normal none infinite running rot;
+    -webkit-animation: 4s linear 0s normal none infinite running rot;
+    width: 100px;
+  }
+
+  @keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .hero-button {
@@ -168,5 +194,14 @@
   .hero-tab-picture {
     width: 142px;
     height: 156px;
+  }
+
+  .btn-icon {
+    fill: #ecd979;
+    transition-duration: 1s;
+  }
+
+  .rotate {
+    transform: rotate(70deg);
   }
 }
